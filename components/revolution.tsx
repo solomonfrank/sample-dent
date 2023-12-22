@@ -41,7 +41,6 @@ const animationVariantsImg = {
   slideRight: {
     opacity: 1,
     scale: 1,
-    visibility: "visible",
     transition: {
       ease: "linear",
       delay: 1,
@@ -58,7 +57,6 @@ const animationVariantsIcon = {
   slideRight: {
     opacity: 1,
     x: "-40%",
-    visibility: "visible",
     transition: {
       ease: "linear",
       delay: 1.2,
@@ -93,7 +91,6 @@ const animationVariantsButton = {
     opacity: 1,
     scaleX: 1,
     transformOrigin: "left",
-    visibility: "visible",
     transition: {
       ease: "linear",
       delay: 0.8,
@@ -109,7 +106,6 @@ const animationVariantsButton = {
 const animationVariantsLogo = {
   slideRight: {
     opacity: 1,
-    visibility: "visible",
     transition: {
       ease: "linear",
       delay: 1.5,
@@ -241,7 +237,7 @@ export const Revolution = () => {
                 initial="original"
                 animate={inView ? "slideRight" : "original"}
                 variants={animationVariantsButton}
-                className="border-none opacity-0 origin-top-left invisible  bg-[#d9e8f9] rounded-full text-secondary"
+                className="border-none opacity-0 origin-top-left  bg-[#d9e8f9] rounded-full text-secondary"
                 size="large"
               >
                 <motion.span
@@ -263,7 +259,7 @@ export const Revolution = () => {
                 initial="original"
                 animate={inView ? "slideRight" : "original"}
                 variants={animationVariantsLogo}
-                className="opacity-0 invisible h-[5rem] w-[5rem]  rounded-full bg-[#ff5434] 
+                className="opacity-0  h-[5rem] w-[5rem]  rounded-full bg-[#ff5434] 
         flex justify-center items-center "
               >
                 <PiToothThin size={30} color="#fff" />
@@ -283,7 +279,7 @@ export const Revolution = () => {
                 initial="original"
                 animate={inView ? "slideRight" : "original"}
                 variants={animationVariantsImg}
-                className="h-[9rem] w-[9rem] opacity-0 invisible rounded-full overflow-hidden  z-10
+                className="h-[9rem] w-[9rem] opacity-0  rounded-full overflow-hidden  z-10
         flex justify-center items-center "
               >
                 <img
