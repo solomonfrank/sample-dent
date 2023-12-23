@@ -16,10 +16,10 @@ import { Button } from "./ui";
 const MotionButton = motion(Button);
 
 const photos = [
-  { url: "/assets/2.png", zIndex: "z-40" },
-  { url: "/assets/3.png", zIndex: "z-30" },
-  { url: "/assets/4.png", zIndex: "z-20" },
-  { url: "/assets/5.png", zIndex: "z-10" },
+  { url: "/assets/2.webp", zIndex: "z-40" },
+  { url: "/assets/3.webp", zIndex: "z-30" },
+  { url: "/assets/4.webp", zIndex: "z-20" },
+  { url: "/assets/5.webp", zIndex: "z-10" },
 ];
 
 const animationVariantsDental = {
@@ -283,7 +283,7 @@ export const Revolution = () => {
         flex justify-center items-center "
               >
                 <img
-                  src="/assets/2.png"
+                  src="/assets/2.webp"
                   className="w-full h-full object-cover"
                 />
               </motion.span>
@@ -354,7 +354,7 @@ export const Revolution = () => {
             className="absolute -left-[5%] top-[65%] w-[20rem] h-[12rem]  "
           >
             <img
-              src="/assets/2.png"
+              src="/assets/2.webp"
               className="w-full h-full object-cover z-10 rounded-lg overflow-hidden"
             />
 

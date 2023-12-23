@@ -6,6 +6,7 @@ import { IconType } from "react-icons";
 import { IoHeartOutline } from "react-icons/io5";
 import { GoArrowUpRight } from "react-icons/go";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 export const Card = ({
   className,

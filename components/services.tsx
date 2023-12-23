@@ -22,27 +22,27 @@ const MotionButton = motion(Button);
 
 const cards = [
   {
-    url: "/assets/5.png",
+    url: "/assets/5.webp",
     title: "Appointment Scheduling",
     icon: PiScan,
   },
   {
-    url: "/assets/4.png",
+    url: "/assets/4.webp",
     title: "Oral Care guide",
     icon: VscTools,
   },
   {
-    url: "/assets/3.png",
+    url: "/assets/3.webp",
     title: "Teledenstry Consultation",
     icon: MdOutlineTouchApp,
   },
   {
-    url: "/assets/17.png",
+    url: "/assets/17.webp",
     title: "Sympton Checker",
     icon: IoSettingsOutline,
   },
   {
-    url: "/assets/16.png",
+    url: "/assets/16.webp",
     title: "Oral health Assessment",
     icon: IoSettingsOutline,
   },
@@ -50,27 +50,27 @@ const cards = [
 
 const cards2 = [
   {
-    url: "/assets/18.png",
+    url: "/assets/18.webp",
     title: "Advanced Technology",
     icon: IoSettingsOutline,
   },
   {
-    url: "/assets/7.png",
+    url: "/assets/7.webp",
     title: "Oral health Assessment",
     icon: PiScan,
   },
   {
-    url: "/assets/8.png",
+    url: "/assets/8.webp",
     title: "Dental Health Record",
     icon: VscTools,
   },
   {
-    url: "/assets/9.png",
+    url: "/assets/9.webp",
     title: "TootlBrush Tracking",
     icon: MdOutlineTouchApp,
   },
   {
-    url: "/assets/10.png",
+    url: "/assets/10.webp",
     title: "Sympton Checker",
     icon: IoSettingsOutline,
   },

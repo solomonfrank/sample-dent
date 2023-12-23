@@ -17,7 +17,7 @@ const cards = [
   {
     id: 4,
     angle: 23,
-    url: "/assets/5.png",
+    url: "/assets/5.webp",
     exitAngle: 26,
     title: "Personalized Care",
     icon: PiScan,
@@ -25,7 +25,7 @@ const cards = [
   {
     id: 3,
     angle: 18,
-    url: "/assets/4.png",
+    url: "/assets/4.webp",
     exitAngle: 21,
     title: "Modern Solution",
     icon: VscTools,
@@ -33,7 +33,7 @@ const cards = [
   {
     id: 2,
     angle: 10,
-    url: "/assets/3.png",
+    url: "/assets/3.webp",
     exitAngle: 13,
     title: "Convenience",
     icon: MdOutlineTouchApp,
@@ -41,7 +41,7 @@ const cards = [
   {
     id: 1,
     angle: 2,
-    url: "/assets/2.png",
+    url: "/assets/2.webp",
     exitAngle: 6,
     title: "Advanced Technology",
     icon: IoSettingsOutline,
