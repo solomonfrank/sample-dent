@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import { Preloader } from "@/components/preloader";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Hero } from "@/components/hero";
 import { Revolution } from "@/components/revolution";
@@ -12,16 +12,28 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+  const timeIdRef = useRef<NodeJS.Timeout>();
 
-    return () => clearTimeout(timeout);
+  useEffect(() => {
+    timeIdRef.current = setTimeout(() => {
+      setLoading(true);
+    }, 2200);
+
+    return () => clearTimeout(timeIdRef.current);
   }, []);
 
+  const handleAnimationEnd = () => {
+    clearTimeout(timeIdRef.current);
+    setLoading(false);
+  };
+
   if (loading) {
-    return <Preloader className={`${inter.className}`} />;
+    return (
+      <Preloader
+        className={`${inter.className}`}
+        handleAnimationEnd={handleAnimationEnd}
+      />
+    );
   }
   return (
     <motion.main

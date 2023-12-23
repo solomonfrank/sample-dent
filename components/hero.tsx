@@ -69,7 +69,7 @@ export const Hero = () => {
               return (
                 <Card
                   key={item.id}
-                  className={`-rotate-[${item.angle}deg] [grid-area:1/1]  animate-tilt-card-other`}
+                  className={`-rotate-[${item.angle}deg] [grid-area:1/1] animate-tilt-card-other`}
                   src={item.url}
                   title={item.title}
                   index={`${item.id}`}

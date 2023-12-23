@@ -2,7 +2,32 @@ import { PiToothThin } from "react-icons/pi";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { motion, AnimatePresence } from "framer-motion";
 
-export const Preloader = ({ className }: { className?: string }) => {
+export const Preloader = ({
+  className,
+  handleAnimationEnd,
+}: {
+  className?: string;
+  handleAnimationEnd?: () => void;
+}) => {
+  const animateLogVariant = {
+    slide: {
+      x: 0,
+      y: "-50%",
+      opacity: 1,
+
+      transition: {
+        delay: 1,
+        ease: "linear",
+        y: {
+          delay: 1.4,
+        },
+      },
+    },
+    original: {
+      x: "-20%",
+      opacity: 0,
+    },
+  };
   return (
     <AnimatePresence>
       <motion.section
@@ -97,31 +122,42 @@ export const Preloader = ({ className }: { className?: string }) => {
 
         <motion.div
           exit={{ opacity: 0 }}
-          // initial={{ x: "-50%", opacity: 0, y: "-50%" }}
-          // animate={{ x: 0, opacity: 1 }}
-          // transition={{ delay: 1, duration: 0.5, ease: "easeInOut" }}
-          className="flex flex-col justify-center items-center absolute opacity-0
-      top-1/2 left-1/2  animate-slideLogo"
+          className="flex flex-col justify-center items-center absolute
+      top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 "
         >
           <motion.span
-            animate={{ y: "-50%" }}
-            initial={{ y: "0" }}
+            // animate={{ x: 0 }}
+            // initial={{ x: "-50%" }}
             transition={{ delay: 1.5, ease: "easeInOut" }}
-            className="flex flex-col justify-center items-center
+            variants={animateLogVariant}
+            onAnimationComplete={(definition) => {
+              console.log("Completed animating", definition);
+              if (handleAnimationEnd) {
+                handleAnimationEnd();
+              }
+            }}
+            animate="slide"
+            initial="original"
+            className="flex flex-col justify-center items-center gap-2  overflow-hidden 
         "
           >
             <motion.span
-              // initial={{ y: "-50%", x: "-50%" }}
-              // animate={{ y: "-50px" }}
-              // transition={{ delay: 1, duration: 0.5, ease: "linear" }}
-              className="h-[6rem] w-[6rem] rounded-full bg-[#ff5434]  overflow-hidden 
-        flex justify-center items-center "
+              // animate={{ x: 0 }}
+              // initial={{ x: "-50%" }}
+              // transition={{ delay: 1.5, ease: "easeInOut" }}
+              className="h-[6rem] w-[6rem] rounded-full bg-[#ff5434]  
+        flex justify-center items-center"
             >
               <PiToothThin size={32} color="#fff" />
             </motion.span>
-            <span className="text-secondary  text-lg inline-block ">
-              DENTYTECH
-            </span>
+            <motion.span
+              initial={{ y: "100%" }}
+              animate={{ y: "0%" }}
+              transition={{ delay: 1.4, ease: "linear" }}
+              className="text-secondary text-lg inline-block "
+            >
+              <span className="inline-block">DENTYTECH</span>
+            </motion.span>
           </motion.span>
         </motion.div>
       </motion.section>

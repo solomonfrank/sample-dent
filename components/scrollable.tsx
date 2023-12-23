@@ -51,7 +51,8 @@ export const ProductScrollable = ({
 
     if (!activeElement) return;
 
-    activeElement.scrollIntoView({
+    scrollWrapperRef.current.scrollTo({
+      top: activeElement.offsetTop - scrollWrapperRef.current.clientHeight / 2,
       behavior: "smooth",
     });
 
