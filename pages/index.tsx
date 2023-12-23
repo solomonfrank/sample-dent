@@ -12,18 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
-  const timeIdRef = useRef<NodeJS.Timeout>();
-
-  useEffect(() => {
-    timeIdRef.current = setTimeout(() => {
-      setLoading(true);
-    }, 2200);
-
-    return () => clearTimeout(timeIdRef.current);
-  }, []);
-
   const handleAnimationEnd = () => {
-    clearTimeout(timeIdRef.current);
     setLoading(false);
   };
 
