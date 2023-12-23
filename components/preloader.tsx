@@ -16,7 +16,7 @@ export const Preloader = ({
       opacity: 1,
 
       transition: {
-        delay: 1,
+        delay: 0.9,
         ease: "linear",
         y: {
           delay: 1.4,
@@ -53,21 +53,6 @@ export const Preloader = ({
                 className="origin-center animate-rotate-arrow"
               />
             </span>
-
-            {/* <span
-          className="origin-center before:inset-0 animate-moveIconDense before:origin-center
-        will-change-auto transition-transform 
-        before:animate-scaleTitle before:rounded-full 
-        before:bg-secondary before:absolute h-[5rem] w-[10rem] overflow-hidden relative   text-md 
-         rounded-full text-[#fff] text-center flex  items-center justify-center"
-        >
-          <span className="absolute animate-dental-fade">DENTAL</span>
-          <BsArrowRight
-            size={30}
-            color="#fff"
-            className="origin-center animate-dental-arrow-show overflow-hidden absolute opacity-0 animate-arrow-fade"
-          />
-        </span> */}
 
             <motion.span
               initial={{ width: "10rem" }}
@@ -121,14 +106,13 @@ export const Preloader = ({
         </motion.div>
 
         <motion.div
-          exit={{ opacity: 0 }}
           className="flex flex-col justify-center items-center absolute
       top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 "
         >
           <motion.span
             // animate={{ x: 0 }}
             // initial={{ x: "-50%" }}
-            transition={{ delay: 1.5, ease: "easeInOut" }}
+            transition={{ delay: 5, ease: "easeInOut" }}
             variants={animateLogVariant}
             onAnimationComplete={(definition) => {
               console.log("Completed animating", definition);
