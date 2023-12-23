@@ -387,7 +387,7 @@ export const Services = () => {
                   label="firstCard"
                   key="firstCard"
                   start={0}
-                  timer={2000}
+                  timer={1500}
                 />
                 <ProductScrollable
                   data={cards2}
@@ -396,7 +396,7 @@ export const Services = () => {
                   label="secondCard"
                   key="secondCard"
                   start={cards.length - 1}
-                  timer={2500}
+                  timer={2000}
                 />
               </div>
             </div>
