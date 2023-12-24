@@ -88,7 +88,7 @@ const animationVariantsFlip = {
   },
   original: {
     rotateY: -35,
-    opacity: 0.1,
+    opacity: 0.05,
     transformOrigin: "center",
   },
 };
@@ -105,7 +105,7 @@ const animationVariantsFlipDown = {
   },
   original: {
     rotateY: 35,
-    opacity: 0.1,
+    opacity: 0.05,
     transformOrigin: "center",
   },
 };
@@ -144,7 +144,7 @@ export const Services = () => {
   const scrollWrapperRef = useRef<HTMLDivElement>(null);
   const activeShortcut = useRef(0);
   const { ref, inView } = useInView({
-    threshold: 0.4,
+    threshold: 0.7,
     triggerOnce: true,
   });
 
