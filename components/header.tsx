@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
 import Container from "@/components/container";
 import { Button } from "@/components/ui";
-import { PiToothThin } from "react-icons/pi";
+import { motion } from "framer-motion";
 import { CgMenuRight } from "react-icons/cg";
+import { PiToothThin } from "react-icons/pi";
 
 const iconVariant = {
   hidden: {
@@ -87,7 +87,7 @@ export const Header = () => {
             >
               Login
             </Button>
-            <Button className="bg-secondary rounded-full   outline-none border-none">
+            <Button className="text-[#fff] bg-secondary rounded-full   outline-none border-none">
               Sign up
             </Button>
           </div>

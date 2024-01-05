@@ -1,13 +1,13 @@
 import Container from "@/components/container";
+import { BsArrowDown } from "react-icons/bs";
+import { FaInstagram } from "react-icons/fa6";
 import { IoSettingsOutline } from "react-icons/io5";
+import { LiaFacebookSquare } from "react-icons/lia";
 import { MdOutlineTouchApp } from "react-icons/md";
-import { VscTools } from "react-icons/vsc";
 import { PiScan } from "react-icons/pi";
 import { RxDotFilled } from "react-icons/rx";
-import { BsArrowDown } from "react-icons/bs";
 import { SlSocialYoutube } from "react-icons/sl";
-import { FaInstagram } from "react-icons/fa6";
-import { LiaFacebookSquare } from "react-icons/lia";
+import { VscTools } from "react-icons/vsc";
 
 import { Card } from "@/components/ui";
 
@@ -17,7 +17,7 @@ const cards = [
   {
     id: 4,
     angle: 23,
-    url: "/assets/5.webp",
+    url: "/assets/21.webp",
     exitAngle: 26,
     title: "Personalized Care",
     icon: PiScan,
@@ -25,7 +25,7 @@ const cards = [
   {
     id: 3,
     angle: 18,
-    url: "/assets/4.webp",
+    url: "/assets/22.webp",
     exitAngle: 21,
     title: "Modern Solution",
     icon: VscTools,
@@ -33,7 +33,7 @@ const cards = [
   {
     id: 2,
     angle: 10,
-    url: "/assets/3.webp",
+    url: "/assets/25.webp",
     exitAngle: 13,
     title: "Convenience",
     icon: MdOutlineTouchApp,
@@ -41,7 +41,7 @@ const cards = [
   {
     id: 1,
     angle: 2,
-    url: "/assets/2.webp",
+    url: "/assets/52.webp",
     exitAngle: 6,
     title: "Advanced Technology",
     icon: IoSettingsOutline,
@@ -92,13 +92,16 @@ export const Hero = () => {
 
           <div className="mr-[50px]">
             <div className="flex gap-3 mb-3">
-              <span>
+              <span className="bg-[#fffcef]">
                 <FaInstagram size={20} />
               </span>
-              <span>
+              <span className="bg-[#fffcef]">
                 <LiaFacebookSquare size={20} />
               </span>
-              <SlSocialYoutube size={20} />
+              <span className="bg-[#fffcef]">
+                {" "}
+                <SlSocialYoutube size={20} />
+              </span>
             </div>
 
             <p className="text-sm">Best Startup of 2003</p>

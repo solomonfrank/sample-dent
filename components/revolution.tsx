@@ -1,14 +1,14 @@
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
 import Container from "@/components/container";
-import { PiDnaLight } from "react-icons/pi";
-import { SiReact } from "react-icons/si";
-import { RxDotFilled } from "react-icons/rx";
+import { motion } from "framer-motion";
 import { BsPlayFill } from "react-icons/bs";
-import { SlSocialYoutube } from "react-icons/sl";
 import { FaInstagram } from "react-icons/fa6";
-import { LiaFacebookSquare } from "react-icons/lia";
 import { IoFlowerSharp } from "react-icons/io5";
+import { LiaFacebookSquare } from "react-icons/lia";
+import { PiDnaLight } from "react-icons/pi";
+import { RxDotFilled } from "react-icons/rx";
+import { SiReact } from "react-icons/si";
+import { SlSocialYoutube } from "react-icons/sl";
+import { useInView } from "react-intersection-observer";
 
 import { PiToothThin } from "react-icons/pi";
 import { Button } from "./ui";
@@ -16,10 +16,10 @@ import { Button } from "./ui";
 const MotionButton = motion(Button);
 
 const photos = [
-  { url: "/assets/2.webp", zIndex: "z-40" },
-  { url: "/assets/3.webp", zIndex: "z-30" },
-  { url: "/assets/4.webp", zIndex: "z-20" },
-  { url: "/assets/5.webp", zIndex: "z-10" },
+  { url: "/assets/6.webp", zIndex: "z-40" },
+  { url: "/assets/12.webp", zIndex: "z-30" },
+  { url: "/assets/13.webp", zIndex: "z-20" },
+  { url: "/assets/15.webp", zIndex: "z-10" },
 ];
 
 const animationVariantsDental = {
@@ -314,7 +314,7 @@ export const Revolution = () => {
           style={{ "--revealIndex": "2" } as React.CSSProperties}
         >
           <h2
-            className={`uppercase w-full gap-2  flex items-center  text-[11rem] will-change-transform 
+            className={`uppercase w-full  flex items-center justify-between   text-[11rem] will-change-transform 
             overflow-hidden opacity-0 ${inView && "animate-reveal-text"} `}
           >
             <span
@@ -325,7 +325,7 @@ export const Revolution = () => {
               WITH TECHNOLOGY
             </span>
 
-            <motion.span className="flex ">
+            <motion.div className="flex">
               {photos.map((item, index) => {
                 return (
                   <motion.span
@@ -334,8 +334,8 @@ export const Revolution = () => {
                     animate={inView ? "slideRight" : "original"}
                     variants={animationVariantsMoreImg}
                     key={index}
-                    className={`h-[4rem]  w-[4rem] [&:not(:last-child)]:-mr-6 rounded-full overflow-hidden
-            flex justify-center items-center opacity-0 ${item.zIndex} `}
+                    className={`h-[4rem]  w-[4rem] [&:not(:last-child)]:-mr-5  [&:not(:first-child)]:-mr-5 rounded-full overflow-hidden
+            flex  items-center justify-center opacity-0 ${item.zIndex} `}
                   >
                     <img
                       src={item.url}
@@ -344,7 +344,7 @@ export const Revolution = () => {
                   </motion.span>
                 );
               })}
-            </motion.span>
+            </motion.div>
           </h2>
 
           <motion.figure
@@ -354,7 +354,7 @@ export const Revolution = () => {
             className="absolute -left-[5%] top-[65%] w-[20rem] h-[12rem]  "
           >
             <img
-              src="/assets/2.webp"
+              src="/assets/53.webp"
               className="w-full h-full object-cover z-10 rounded-lg overflow-hidden"
             />
 
@@ -414,7 +414,7 @@ export const Revolution = () => {
               >
                 <span
                   style={{ "--icon-fade": "0" } as React.CSSProperties}
-                  className={`${
+                  className={` bg-[#fffcef] ${
                     inView && "animate-revolution-icon-fade"
                   } opacity-0`}
                 >
@@ -422,7 +422,7 @@ export const Revolution = () => {
                 </span>
                 <span
                   style={{ "--icon-fade": "1" } as React.CSSProperties}
-                  className={`${
+                  className={`bg-[#fffcef] ${
                     inView && "animate-revolution-icon-fade"
                   } opacity-0`}
                 >
@@ -430,7 +430,7 @@ export const Revolution = () => {
                 </span>
                 <span
                   style={{ "--icon-fade": "2" } as React.CSSProperties}
-                  className={`${
+                  className={`bg-[#fffcef] ${
                     inView && "animate-revolution-icon-fade"
                   } opacity-0`}
                 >

@@ -1,6 +1,6 @@
+import { AnimatePresence, motion } from "framer-motion";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { PiToothThin } from "react-icons/pi";
-import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
-import { motion, AnimatePresence } from "framer-motion";
 
 const MotionBsArrowRight = motion(BsArrowRight);
 
@@ -149,6 +149,21 @@ export const Preloader = ({
       opacity: 1,
     },
   };
+
+  const denseVaraintParent = {
+    final: {
+      x: "-50%",
+      transition: {
+        duration: xDuration,
+        delay: xDuration * 2,
+        when: "afterChildren",
+      },
+    },
+    original: {
+      x: "0",
+      y: 0,
+    },
+  };
   return (
     <AnimatePresence>
       <motion.section
@@ -250,8 +265,13 @@ export const Preloader = ({
           </motion.div>
 
           <motion.div className="flex justify-center items-center w-full h-full ml-[25rem]">
-            <div className="flex gap-2 items-center ">
-              <div>
+            <motion.div
+              initial="original"
+              animate="final"
+              variants={denseVaraintParent}
+              className="flex gap-2 items-center "
+            >
+              <motion.div>
                 <motion.span
                   layout
                   initial="original"
@@ -277,7 +297,7 @@ export const Preloader = ({
                     className="origin-center overflow-hidden absolute opacity-0 animate-rotate-left-arrow"
                   />
                 </motion.span>
-              </div>
+              </motion.div>
 
               <motion.span
                 initial="original"
@@ -288,7 +308,7 @@ export const Preloader = ({
               >
                 <PiToothThin size={30} color="#fff" />
               </motion.span>
-            </div>
+            </motion.div>
           </motion.div>
         </motion.div>
 

@@ -1,79 +1,89 @@
-import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { PiDnaLight } from "react-icons/pi";
-import { SiReact } from "react-icons/si";
-import { RxDotFilled } from "react-icons/rx";
-import { SlSocialYoutube } from "react-icons/sl";
 import { FaInstagram } from "react-icons/fa6";
-import { LiaFacebookSquare } from "react-icons/lia";
 import { IoSettingsOutline } from "react-icons/io5";
+import { LiaFacebookSquare } from "react-icons/lia";
 import { MdOutlineTouchApp } from "react-icons/md";
+import { PiDnaLight, PiScan } from "react-icons/pi";
+import { RxDotFilled } from "react-icons/rx";
+import { SiReact } from "react-icons/si";
+import { SlSocialYoutube } from "react-icons/sl";
 import { VscTools } from "react-icons/vsc";
-import { PiScan } from "react-icons/pi";
+import { useInView } from "react-intersection-observer";
 
-import { PiToothThin } from "react-icons/pi";
-import { Button } from "./ui";
-import Container from "./container";
-import { AnimatedText } from "./ui/AnimatedText";
 import { useEffect, useRef } from "react";
+import { PiToothThin } from "react-icons/pi";
+import Container from "./container";
 import { ProductScrollable } from "./scrollable";
+import { Button } from "./ui";
+import { AnimatedText } from "./ui/AnimatedText";
 
 const MotionButton = motion(Button);
 
 const cards = [
   {
+    url: "/assets/51.webp",
+    title: "Oral Health Assessment",
+    icon: PiScan,
+  },
+  {
     url: "/assets/5.webp",
-    title: "Appointment Scheduling",
-    icon: PiScan,
-  },
-  {
-    url: "/assets/4.webp",
-    title: "Oral Care guide",
-    icon: VscTools,
-  },
-  {
-    url: "/assets/3.webp",
-    title: "Teledenstry Consultation",
-    icon: MdOutlineTouchApp,
-  },
-  {
-    url: "/assets/17.webp",
-    title: "Sympton Checker",
-    icon: IoSettingsOutline,
-  },
-  {
-    url: "/assets/16.webp",
-    title: "Oral health Assessment",
-    icon: IoSettingsOutline,
-  },
-];
-
-const cards2 = [
-  {
-    url: "/assets/18.webp",
-    title: "Advanced Technology",
-    icon: IoSettingsOutline,
-  },
-  {
-    url: "/assets/7.webp",
-    title: "Oral health Assessment",
-    icon: PiScan,
-  },
-  {
-    url: "/assets/8.webp",
     title: "Dental Health Record",
     icon: VscTools,
   },
+  // {
+  //   url: "/assets/3.webp",
+  //   title: "Teledenstry Consultation",
+  //   icon: MdOutlineTouchApp,
+  // },
+
   {
     url: "/assets/9.webp",
     title: "TootlBrush Tracking",
     icon: MdOutlineTouchApp,
   },
   {
-    url: "/assets/10.webp",
+    url: "/assets/25.webp",
     title: "Sympton Checker",
     icon: IoSettingsOutline,
   },
+  // {
+  //   url: "/assets/16.webp",
+  //   title: "Oral health Assessment",
+  //   icon: IoSettingsOutline,
+  // },
+];
+
+const cards2 = [
+  {
+    url: "/assets/24.webp",
+    title: "Teledenstry Consultation",
+    icon: MdOutlineTouchApp,
+  },
+  {
+    url: "/assets/27.webp",
+    title: "Oral Care Guide",
+    icon: IoSettingsOutline,
+  },
+  {
+    url: "/assets/52.webp",
+    title: "Appointment Scheduling",
+    icon: PiScan,
+  },
+  {
+    url: "/assets/26.webp",
+    title: "Medical Tracking",
+    icon: VscTools,
+  },
+  //{
+  //   url: "/assets/9.webp",
+  //   title: "TootlBrush Tracking",
+  //   icon: MdOutlineTouchApp,
+  // },
+  // {
+  //   url: "/assets/25.webp",
+  //   title: "Sympton Checker",
+  //   icon: IoSettingsOutline,
+  // },
 ];
 
 const animationVariantsFlip = {
@@ -336,7 +346,7 @@ export const Services = () => {
                     >
                       <span
                         style={{ "--icon-fade": "0" } as React.CSSProperties}
-                        className={`${
+                        className={` bg-[#fffcef] ${
                           inView && "animate-revolution-icon-fade"
                         } opacity-0`}
                       >
@@ -344,7 +354,7 @@ export const Services = () => {
                       </span>
                       <span
                         style={{ "--icon-fade": "1" } as React.CSSProperties}
-                        className={`${
+                        className={` bg-[#fffcef] ${
                           inView && "animate-revolution-icon-fade"
                         } opacity-0`}
                       >
@@ -352,7 +362,7 @@ export const Services = () => {
                       </span>
                       <span
                         style={{ "--icon-fade": "2" } as React.CSSProperties}
-                        className={`${
+                        className={`bg-[#fffcef] ${
                           inView && "animate-revolution-icon-fade"
                         } opacity-0`}
                       >
@@ -387,7 +397,7 @@ export const Services = () => {
                   label="firstCard"
                   key="firstCard"
                   start={0}
-                  timer={1500}
+                  timer={1000}
                 />
                 <ProductScrollable
                   data={cards2}
@@ -396,7 +406,7 @@ export const Services = () => {
                   label="secondCard"
                   key="secondCard"
                   start={cards.length - 1}
-                  timer={2000}
+                  timer={1500}
                 />
               </div>
             </div>
